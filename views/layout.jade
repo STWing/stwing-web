@@ -1,0 +1,65 @@
+doctype 5
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width')
+    title= title
+
+    //- Initialize Foundation CSS (SCSS -> CSS)
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/foundation.css')
+
+    //- Additional styling
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    script(src='/javascripts/vendor/custom.modernizr.js')
+    script(src='/javascripts/vendor/zepto.js')
+    script(src='/javascripts/vendor/jquery.unveil.min.js')
+
+    //- Initialize Foundation JavaScripts
+    script(src='/javascripts/foundation.min.js')
+    script
+      $(document).ready(function() {
+        $(this).foundation();
+        $('img').unveil();
+      });
+
+  body
+    #background
+
+    //- Header area (including navigation bar)
+    header.row
+      .large-12.columns
+
+        //- Logo
+        a(href='/')
+          img(src='http://placehold.it/400x200&text=Logo')
+
+        nav.top-bar
+          ul.title-area
+            //- We intentionally leave the title blank
+            li.name
+
+            //- Displays the menu icon at smaller widths
+            li.toggle-topbar.menu-icon: a(href='#'): span Menu
+
+          section.top-bar-section
+            //- Links anchored to the left
+            ul.left
+              li: a(href='/events') Events
+              li: a(href='/projects') Projects
+              li: a(href='/resources') Resources
+              li: a(href='/contact') Contact us
+
+            //- Links anchored to the right
+            ul.right
+              li: a(href='#') Login
+
+    block content
+
+    .row
+      .large-12.columns
+        hr
+        footer.row
+          .large-6.columns
+            p &copy;2013 Science and Technology Wing, University of Pennsylvania

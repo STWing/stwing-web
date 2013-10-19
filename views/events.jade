@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  .row
+    .large-12.columns
+      h2= title
+      p All upcoming STWing events are posted on the calendar below
+
+      iframe(src='https://www.google.com/calendar/embed?showTitle=0&height=600&wkst=1&bgcolor=%23FFFFFF&src=sf8f7jdl12e36jaohuqkrkifro%40group.calendar.google.com&color=%23711616&src=0o0p2nnjuq30rllmrpj9pf363c%40group.calendar.google.com&color=%23865A5A&ctz=America%2FNew_York',
+        style='border-width: 0', width=800, height=600, frameborder=0, scrolling=no)
