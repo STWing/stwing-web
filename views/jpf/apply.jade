@@ -1,0 +1,40 @@
+extends jpf-layout
+
+block jpf-content
+  h2= title
+
+  form(method='POST', action='/jpf/apply', enctype='multipart/form-data')
+    fieldset
+      legend Your information
+
+      label(for='student-name') Your full name
+      input(type='text', id='student-name', name='application[student_name]',
+        required=true, tabindex=1)
+
+      label(for='student-email') Your email (.upenn.edu)
+      input(type='email', id='student-email', name='application[student_email]',
+        placeholder='beeker@seas.upenn.edu', required=true, tabindex=1)
+
+    fieldset
+      legend Advisor information
+
+      label(for='advisor-name') Advisor's full name
+      input(type='text', id='advisor-name', name='application[advisor_name]',
+        required=true, tabindex=1)
+
+      label(for='advisor-email') Advisor's email
+      input(type='email', id='advisor-email', name='application[advisor_email]',
+        required=true, tabindex=1)
+
+    fieldset
+      legend Your proposal
+
+      label(for='proposal-summary') Brief 1-2 sentence description of your proposed research
+      textarea(id='proposal-summary', name='application[summary]',
+        spellcheck=true, required=true, tabindex=1)
+
+      label(for='proposal-file') Attach your proposal (preferably PDF)
+      input(type='file', id='proposal-file', name='application[file]',
+        required=true, tabindex=1)
+
+    input.button(type='submit', tabindex=1)

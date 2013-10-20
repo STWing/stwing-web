@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+
+  .row
+    .large-3.columns
+      ul.side-nav
+        li: a(href='/jpf') JPF Home
+        li: a(href='/jpf/background') Background
+        li.divider
+        li: a(href='/jpf/rules') Rules and eligibility
+        li: a(href='/jpf/apply'): strong Online application
+
+    .large-9.columns
+      article
+        block jpf-content
