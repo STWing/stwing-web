@@ -35,7 +35,7 @@ html
         a(href='/')
           img(src='http://placehold.it/400x200&text=Logo')
 
-        nav.top-bar
+        nav.top-bar(data-options='is_hover:false')
           ul.title-area
             //- We intentionally leave the title blank
             li.name
@@ -48,8 +48,13 @@ html
             ul.left
               li: a(href='/events') Events
               li: a(href='/projects') Projects
-              li: a(href='/resources') Resources
               li: a(href='/contact') Contact us
+              li.divider
+              li.has-dropdown
+                a(href='#') More
+                ul.dropdown
+                  li: a(href='/jpf') John Parker Fellowship
+                  li: a(href='/rgb') Rube Goldberg competition
 
             //- Links anchored to the right
             ul.right
