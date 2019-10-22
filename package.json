@@ -11,6 +11,6 @@
     "node-sass": "~> 0.7",
 
     "passport": "~> 0.1",
-    "js-yaml": "~> 2.1"
+    "js-yaml": "~> 3.13"
   }
 }
